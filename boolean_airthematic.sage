@@ -57,9 +57,12 @@ def outputform(func):
 #Question 1
 
 def booleanAdd(f, g):
+	# print("in add")
 	h1 = f+g
 	print('f xor g = ') 
-	print(outputform(h1))
+	print("ANF form : ", h1)
+	print("\n")
+	print("list representation : ", outputform(h1))
 
 
 #Question 2
@@ -67,14 +70,18 @@ def booleanAdd(f, g):
 def booleanMultiply(f, g):
 	h2 = f*g
 	print('f*g = ')
+	print("ANF form : ", h2)
+	print("\n")
 	print(outputform(h2))
 
 
 #Question 4
-def booleanSubs(f, g):
+def booleanSubs(f, t):
 	dict = {mapp[i]:1 for i in t}
 	substi = f.subs(dict)
 	print('f/t = ')
+	print("ANF form : ", substi)
+	print("\n")
 	print(outputform(substi))
 
 if __name__ == '__main__':
@@ -85,7 +92,7 @@ if __name__ == '__main__':
 
 	inp1 = [1,[[0],[3],[4,5],[6,7],[0,1,2,4],[1,2,5,6,7]]] #Feed in Input function f
 	inp2 = [0,[[1],[2,4],[5,6],[1,2,6],[0,5,6,7]]] #Feed in Input function g
-	t = [0,4,5] #Feed in the substitution term t
+	inpt = [0,4,5] #Feed in the substitution term t
 
 	#--------------------------------------------------------------------------------------------------------
 	#Build function 'f' from inp1
@@ -96,6 +103,7 @@ if __name__ == '__main__':
 			term = term*mapp[j]
 		f = f+term	
 
+	print("function 1 : ", f)
 	#Build function 'g' from inp2
 	g = inp2[0]
 	for i in inp2[1]:
@@ -104,13 +112,28 @@ if __name__ == '__main__':
 			term = term*mapp[j]
 		g = g+term
 
-	operation = input("Choose one of the operations from Add, Multiply, Subs: ")
-	if operation == "add":
-		booleanAdd(f, g)
-	elif operation == "multiply":
-		booleanMultiply(f, g)
-	elif operation == "subs":
-		booleanSubs(f, g)
+	#Build substitution term t from input t 
+	t = 1
+	for i in inpt:
+		t = t*mapp[i]
 
+	
+
+
+	print("function 2 : ", g)
+	print("substitution term t : ", t)
+	print("\n")
+	
+	while True : 
+		print("\n\n")
+		operation = input("Choose one of the operations from 1. Add, 2. Multiply, 4. Subs: ")
+		if operation == 1:
+			booleanAdd(f, g)
+		elif operation == 2:
+			booleanMultiply(f, g)
+		elif operation == 4:
+			booleanSubs(f, inpt)
+		else : 
+			print("command not recognized")
 
 
