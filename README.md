@@ -7,6 +7,7 @@ Given Boolean polynomials in several variables in ANF form the code will return 
 ## Functions Implemented:
 The various functions implemented and the formats the user is expected to follow while inputting functions. <br/>
 1. **Addition** <br/>
+
 Inputs <br/>
 ```python 
 f = [1, [ [0], [3], [4,5], [6,7], [0,1,2,4] ] ] =  1 + x0 + x3 + x4*x5 + x6*x7 + x0*x1*x2*x4
@@ -17,6 +18,7 @@ Outputs <br/>
 f + g = [1, [ [0], [3], [4,5], [6,7], [0,1,2,4] ] ] =  1 + x0 + x3 + x4*x5 + x6*x7 + x0*x1*x2*x4
 ``` 
 2. **Product** <br/>
+
 Inputs <br/>
 ```python 
 f = [1, [ [0], [3], [4,5], [6,7], [0,1,2,4] ] ] =  1 + x0 + x3 + x4*x5 + x6*x7 + x0*x1*x2*x4 
@@ -27,6 +29,7 @@ Outputs <br/>
 f * g = [1, [ [0], [3], [4,5], [6,7], [0,1,2,4] ] ] =  1 + x0 + x3 + x4*x5 + x6*x7 + x0*x1*x2*x4
 ``` 
 3. **Composition** <br/>
+
 Inputs <br/>
 ```python 
 f = [1, [ [0], [3], [4,5], [6,7], [0,1,2,4] ] ] =  1 + x0 + x3 + x4*x5 + x6*x7 + x0*x1*x2*x4
@@ -38,6 +41,7 @@ Outputs <br/>
 h(f, g) = [1, [ [0], [3], [4,5], [6,7], [0,1,2,4] ] ] =  1 + x0 + x3 + x4*x5 + x6*x7 + x0*x1*x2*x4
 ``` 
 4. **Substitution** <br/>
+
 Inputs <br/>
 ```python 
 f = [1, [ [0], [3], [4,5], [6,7], [0,1,2,4] ] ] =  1 + x0 + x3 + x4*x5 + x6*x7 + x0*x1*x2*x4
