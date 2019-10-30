@@ -124,7 +124,7 @@ if __name__ == '__main__':
 	while True : 
 		print("\n\n")
 		print("Choose one of the operations to perform (enter the number - eg: 2, enter 0 to exit): ")
-		operation = input("1. Add, 2. Multiply, 3. Composition, 4. Subs: ")
+		operation = input("1. Addition, 2. Multiplication, 3. Composition, 4. Substitution: ")
 		print("\n")
 		if operation == _sage_const_1 :
 			print('To perform Addition, provide two boolean functions f,g in Standard Input Form in atmost 8 variables')   
