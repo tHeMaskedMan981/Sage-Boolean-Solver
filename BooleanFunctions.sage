@@ -97,7 +97,7 @@ def print_error(e):
 if __name__ == '__main__':
 	
 
-	ascii_banner = pyfiglet.figlet_format("Boolean Solver")
+	ascii_banner = pyfiglet.figlet_format("Boolean Arithmetic")
 	print(ascii_banner)
 	B=BooleanPolynomialRing(_sage_const_8 ,'x',order='deglex')
 	x0,x1,x2,x3,x4,x5,x6,x7 = B.gens()
@@ -194,7 +194,7 @@ if __name__ == '__main__':
 				print_error(e)
 
 		elif operation == _sage_const_4 :
-			print('To perform Substitutioin, provide one boolean functions f in _Standard Input Form_ in atmost 8 variables')
+			print('To perform Substitution, provide one boolean functions f in _Standard Input Form_ in atmost 8 variables')
 			print('and a term t in _Standard Input Form_ in atmost 8 variables')
 			print("\n")            
 			print('For example, f=[1,[[0],[3],[4,5],[6,7],[0,1,2,4]]]=1+x0+x3+x4*x5+x6*x7+x0*x1*x2*x4')  
