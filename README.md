@@ -3,7 +3,8 @@
 Given Boolean polynomials in several variables in ANF form the code will return their addition, products, compositions and substitutions. <br/>
 ## Running the Script:
 1. Install sagemath via: https://doc.sagemath.org/html/en/installation/
-2. Run the main file using: sage boolean_arithmetic.sage
+2. Go to Scripts/
+3. Run the main file using: sage BooleanFunctions.sage
 ## Functions Implemented:
 The various functions implemented and the formats the user is expected to follow while inputting functions. <br/>
 1. **Addition** <br/>
@@ -22,7 +23,7 @@ f + g = [0, [[0, 1, 2, 4], [0, 2, 4], [2, 4], [4, 5], [5, 6], [6, 7]]] =  x0*x1*
 Input <br/>
 ```python 
 f = [1, [ [3], [4,5] ] ] =  1 + x3 + x4*x5  
-g = [1, [ [0], [4,2] ] ] =  1 + x3 + x4*x2
+g = [1, [ [0], [4,2] ] ] =  1 + x0 + x4*x2
 ``` 
 Output <br/>
 ```python 
